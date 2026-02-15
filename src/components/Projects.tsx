@@ -13,6 +13,13 @@ const projects = [
     tech: "NEXT.JS, TYPESCRIPT, TAILWIND CSS"
   },
   {
+    title: "My Portfolio",
+    desc: "A high-performance, responsive 3D developer portfolio built with Next.js 15 and Framer Motion, featuring smooth scroll animations, a secure serverless contact system, and a theme-adaptive UI.",
+    img: "/Portfolio2.png",
+    link: "https://nirankar-gangwar.vercel.app/",
+    tech: "NEXT.JS, TYPESCRIPT, TAILWIND CSS"
+  },
+  {
     title: "CallOne - Video Calling",
     desc: "Built a real-time Audio & Video Calling Web App using React and ZegoCloud SDK, supporting secure one-to-one voice and video calls with status handling.",
     img: "/CallOne.png", 
@@ -20,17 +27,17 @@ const projects = [
     tech: "REACT, ZEGOCLOUD, ZIM SDK"
   },
   {
-    title: "Todo Web App",
-    desc: "Developed a responsive ToDo List App with Local Storage for data persistence. Features add, delete, and search functionality with a smooth UI.",
-    img: "/Portfolio.png", 
-    link: "https://github.com/mrgangwar",
-    tech: "JAVASCRIPT (ES6+), HTML5, CSS3"
+    title: "Profile Card Generator",
+    desc: "A premium, fully responsive Next.js-based Profile Card Generator is a tool that allows users to design their professional identity (profile) cards with a live preview.",
+    img: "/CardGenerator.png", 
+    link: "https://github.com/mrgangwar/profile-card-generator",
+    tech: "TyprScript, Next.js, Tailwind"
   },
   {
-    title: "Project Four",
-    desc: "Additional project description goes here. Modern stack implementation with focused UX/UI principles.",
-    img: "/Portfolio.png", 
-    link: "#",
+    title: "Library Management",
+    desc: "A production-ready, testable Library Management System built using Next.js and TypeScript, featuring user borrowing limits (maximum 2 books), inventory tracking, and return functionality, implemented following KISS and DRY principles",
+    img: "/Library.png", 
+    link: "https://github.com/mrgangwar/library-management-system",
     tech: "NEXT.JS, TAILWIND"
   }
 ];
@@ -39,6 +46,7 @@ export default function Projects() {
   const containerRef = useRef<HTMLElement>(null);
   const [showAll, setShowAll] = useState(false);
 
+  // Logic to show either first 3 or all projects
   const visibleProjects = showAll ? projects : projects.slice(0, 3);
 
   const textFillEffect = {
@@ -54,10 +62,8 @@ export default function Projects() {
 
   const textHoverStyle = "group-hover:!text-transparent group-hover:![background-size:100%_100%]";
 
-  // --- Global Button Style ---
   const btnAnimationLogic = "relative overflow-hidden transition-all duration-500 hover:text-white hover:scale-105 before:content-[''] before:absolute before:inset-0 before:bg-secondary before:-z-10 before:scale-y-0 before:origin-center before:transition-transform before:duration-500 hover:before:scale-y-100";
 
-  // --- Animation Variants (Hero & About) ---
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -67,13 +73,13 @@ export default function Projects() {
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, x: -100 }, // Sync: Left to Right Flow
+    hidden: { opacity: 0, x: -100 }, 
     visible: { 
       opacity: 1, 
       x: 0, 
       transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] } 
     },
-    exit: { opacity: 0, scale: 0.95, transition: { duration: 0.3 } }
+    exit: { opacity: 0, x: 100, transition: { duration: 0.3 } }
   };
 
   return (
@@ -103,12 +109,15 @@ export default function Projects() {
           viewport={{ once: true, amount: 0.1 }}
           className="space-y-32"
         >
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence mode="popLayout" initial={false}>
             {visibleProjects.map((p, i) => (
               <motion.div 
-                key={p.title}
+                key={p.title} // Unique key ensures smooth transition
                 variants={itemVariants}
                 layout
+                initial="hidden"
+                animate="visible"
+                exit="exit"
                 className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-12 md:gap-20 group`}
               >
                 {/* Project Info */}
@@ -150,7 +159,6 @@ export default function Projects() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    {/* Hover Glow Effect */}
                     <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover/img:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none" />
                   </a>
                 </div>
