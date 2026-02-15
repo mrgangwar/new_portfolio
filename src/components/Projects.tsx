@@ -8,28 +8,28 @@ const projects = [
   {
     title: "Shopsyraa - E-commerce",
     desc: "Developed a scalable storefront using Next.js and TypeScript, reducing page load time by 25%. Built a modular architecture for high maintainability and SEO optimization.",
-    img: "/shopsyraa.png", 
+    img: "/Shopsyraa.png",
     link: "https://shopsyra-ulki.vercel.app/",
     tech: "NEXT.JS, TYPESCRIPT, TAILWIND CSS"
   },
   {
     title: "CallOne - Video Calling",
     desc: "Built a real-time Audio & Video Calling Web App using React and ZegoCloud SDK, supporting secure one-to-one voice and video calls with status handling.",
-    img: "/callone.png", 
+    img: "/CallOne.png", 
     link: "https://github.com/mrgangwar/CallOne",
     tech: "REACT, ZEGOCLOUD, ZIM SDK"
   },
   {
     title: "Todo Web App",
     desc: "Developed a responsive ToDo List App with Local Storage for data persistence. Features add, delete, and search functionality with a smooth UI.",
-    img: "/portfolio.png", 
+    img: "/Portfolio.png", 
     link: "https://github.com/mrgangwar",
     tech: "JAVASCRIPT (ES6+), HTML5, CSS3"
   },
   {
     title: "Project Four",
     desc: "Additional project description goes here. Modern stack implementation with focused UX/UI principles.",
-    img: "/portfolio.png",
+    img: "/Portfolio.png", 
     link: "#",
     tech: "NEXT.JS, TAILWIND"
   }
