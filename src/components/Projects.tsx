@@ -6,12 +6,23 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 // --- Project Data ---
 const projects = [
   {
-    title: "Shopsyraa - E-commerce",
+    title: "KickStreet - E-commerce",
     desc: "Developed a scalable storefront using Next.js and TypeScript, reducing page load time by 25%. Built a modular architecture for high maintainability and SEO optimization.",
-    img: "/Shopsyraa.png",
-    link: "https://shopsyra-ulki.vercel.app/",
+    img: "/public/KickStreet.png",
+    link: "https://kickstreet-theta.vercel.app/",
     tech: "NEXT.JS, TYPESCRIPT, TAILWIND CSS"
   },
+
+ {
+    
+  title: "VidyaSetu - Tuition Management App",
+  desc: "Developed a full-stack SaaS-based tuition management system with role-based access for Admins, Teachers, and Students, enabling streamlined student management, attendance tracking, and fee collection.",
+  img: "/public/VidyaSetu.jpeg",
+  link: "https://github.com/mrgangwar", 
+  tech: "REACT NATIVE, EXPO, NODE.JS, EXPRESS, MONGODB"
+
+  },
+
   {
     title: "My Portfolio",
     desc: "A high-performance, responsive 3D developer portfolio built with Next.js 15 and Framer Motion, featuring smooth scroll animations, a secure serverless contact system, and a theme-adaptive UI.",
@@ -39,7 +50,9 @@ const projects = [
     img: "/Library.png", 
     link: "https://github.com/mrgangwar/library-management-system",
     tech: "NEXT.JS, TAILWIND"
-  }
+  },
+  
+  
 ];
 
 export default function Projects() {
