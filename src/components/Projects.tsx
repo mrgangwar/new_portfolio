@@ -13,6 +13,23 @@ const projects = [
     tech: "NEXT.JS, TYPESCRIPT, TAILWIND CSS"
   },
 
+    {
+    title: "KickStreet - Mobile App",
+    desc: "Built KickStreet, a cross-platform sneaker e-commerce app (React Native + Node.js/Express.js) with JWT auth, RBAC, and a real-time admin dashboard for inventory and revenue tracking.",
+    img: "/KickStreetapk.png",
+    link: "https://github.com/mrgangwar/kickstreet-fullstack-app",
+    tech: "REACT NATIVE, EXPO, NODE.JS, EXPRESS, MONGODB"
+  },
+
+    {
+    title: "Expense Tracker - Finance App",
+    desc: "Developed an offline-first personal finance app using React Native and Expo SDK 54, with zero backend dependency via local AsyncStorage persistence. Built an analytics dashboard with interactive charts for budget tracking and category breakdowns, using Reanimated for smooth performance.",
+    img: "/expense.png",
+    link: "https://github.com/mrgangwar/Expense-Tracker-Mobile-Application-",
+    tech: "REACT NATIVE, EXPO SDK 54, JAVASCRIPT, ASYNCSTORAGE"
+  },
+
+
  {
     
   title: "VidyaSetu - Tuition Management App",
