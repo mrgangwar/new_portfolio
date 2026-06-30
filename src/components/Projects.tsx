@@ -16,7 +16,7 @@ const projects = [
     {
     title: "KickStreet - Mobile App",
     desc: "Built KickStreet, a cross-platform sneaker e-commerce app (React Native + Node.js/Express.js) with JWT auth, RBAC, and a real-time admin dashboard for inventory and revenue tracking.",
-    img: "/kickStreetapk.png",
+    img: "/kickstreetapk.png",
     link: "https://github.com/mrgangwar/kickstreet-fullstack-app",
     tech: "REACT NATIVE, EXPO, NODE.JS, EXPRESS, MONGODB"
   },
